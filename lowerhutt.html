@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/map.css">
+    <title>Waypoints in directions</title>
+  </head>
+  <body>
+    <div id="map"></div>
+    <div id="right-panel">
+    <div>
+    <b>Start:</b>
+    <select id="start">
+      <option value="Avalon Park Taita Drive, Avalon, Lower Hutt">Avalon Park</option>
+      <option value="Belmont Regional Park, Takapu Valley, Wellington">Belmont Regional Park</option>
+      <option value="Burdan's Gate Pencarrow Coast Road, Pencarrow Head, Lower Hutt">Burdan’s Gate</option>
+      <option value="Butterfly Creek Kowhai Street, Muritai, Lower Hutt">Butterfly Creek</option>
+      <option value="art gallery near Dowse Drive, Maungaraki, Lower Hutt">Dowse Art Museum</option>
+      <option value="East Harbour Regional Park, Wainuiomata, Lower Hutt">East Harbour Regional Park</option>
+      <option value="Francis Bell Reserve, Lowry Bay, Lower Hutt">Francis Bell Reserve</option>
+      <option value="Fraser Park Squash Club Percy Cameron Street, Lower Hutt">Fraser Park</option>
+      <option value="Gibbes Watson Conservatory Myrtle Street, Lower Hutt">Gibbes Watson Conservatory</option>
+      <option value="Hayward Eastern Hills Scenic Reserve, Waiwhetu, Lower Hutt">Hayward Eastern Hill Scenic Reserve</option>
+      <option value="Hikoikoi Reserve, Petone, Lower Hutt">Hikoikoi Reserve</option>
+      <option value="Jubilee Park, Normandale, Lower Hutt">Jubilee Park</option>
+      <option value="Keith George Memorial Park, Haywards, Lower Hutt">Keith George Memorial Park</option>
+      <option value="Lake Kohangapiripiri, Pencarrow Head, Lower Hutt">Lake Kohangapiripiri</option>
+      <option value="McEwan Park, Petone, Lower Hutt">McEwan Park</option>
+      <option value="Mitchell Park, Epuni, Lower Hutt">Mitchell Park</option>
+      <option value="Mount Matthews, Rimutaka Forest Park">Mount Matthews</option>
+      <option value="Pencarrow Lighthouse Pencarrow Coast Road, Pencarrow Head, Lower Hutt">Pencarrow Head Lighthouse</option>
+      <option value="Percy Scenic Reserve Dowse Drive, Maungaraki, Lower Hutt">Percy Scenic Reserve</option>
+      <option value="Petone Foreshore Playground, Petone, Lower Hutt">Petone Foreshore Playground</option>
+      <option value="Petone Settlers Museum, Petone, Lower Hutt">Petone Settlers Museum</option>
+      <option value="Riddiford Gardens, Lower Huttn">Riddiford Gardens</option>
+      <option value="Sladden Park, Petone, Lower Hutt">Sladden Park</option>
+      <option value="Te Whiti Park Whites Line East, Waiwhetu, Lower Hutt">Te Whiti Park</option>
+      <option value="75 Woburn Rd, Lower Hutt, 5010">Vogel House</option>
+      <option value="Williams Park, Days Bay, Lower Hutt">Williams Park</option>
+    </select>
+    <br>
+    <b>Waypoints:</b> <br>
+    <i>Multiple selection</i> <br>
+    <select multiple id="waypoints">
+      <option value="Avalon Park Taita Drive, Avalon, Lower Hutt">Avalon Park</option>
+      <option value="Belmont Regional Park, Takapu Valley, Wellington">Belmont Regional Park</option>
+      <option value="Burdan's Gate Pencarrow Coast Road, Pencarrow Head, Lower Hutt">Burdan’s Gate</option>
+      <option value="Butterfly Creek Kowhai Street, Muritai, Lower Hutt">Butterfly Creek</option>
+      <option value="art gallery near Dowse Drive, Maungaraki, Lower Hutt">Dowse Art Museum</option>
+      <option value="East Harbour Regional Park, Wainuiomata, Lower Hutt">East Harbour Regional Park</option>
+      <option value="Francis Bell Reserve, Lowry Bay, Lower Hutt">Francis Bell Reserve</option>
+      <option value="Fraser Park Squash Club Percy Cameron Street, Lower Hutt">Fraser Park</option>
+      <option value="Gibbes Watson Conservatory Myrtle Street, Lower Hutt">Gibbes Watson Conservatory</option>
+      <option value="Hayward Eastern Hills Scenic Reserve, Waiwhetu, Lower Hutt">Hayward Eastern Hill Scenic Reserve</option>
+      <option value="Hikoikoi Reserve, Petone, Lower Hutt">Hikoikoi Reserve</option>
+      <option value="Jubilee Park, Normandale, Lower Hutt">Jubilee Park</option>
+      <option value="Keith George Memorial Park, Haywards, Lower Hutt">Keith George Memorial Park</option>
+      <option value="Lake Kohangapiripiri, Pencarrow Head, Lower Hutt">Lake Kohangapiripiri</option>
+      <option value="McEwan Park, Petone, Lower Hutt">McEwan Park</option>
+      <option value="Mitchell Park, Epuni, Lower Hutt">Mitchell Park</option>
+      <option value="Mount Matthews, Rimutaka Forest Park">Mount Matthews</option>
+      <option value="Pencarrow Lighthouse Pencarrow Coast Road, Pencarrow Head, Lower Hutt">Pencarrow Head Lighthouse</option>
+      <option value="Percy Scenic Reserve Dowse Drive, Maungaraki, Lower Hutt">Percy Scenic Reserve</option>
+      <option value="Petone Foreshore Playground, Petone, Lower Hutt">Petone Foreshore Playground</option>
+      <option value="Petone Settlers Museum, Petone, Lower Hutt">Petone Settlers Museum</option>
+      <option value="Riddiford Gardens, Lower Huttn">Riddiford Gardens</option>
+      <option value="Sladden Park, Petone, Lower Hutt">Sladden Park</option>
+      <option value="Te Whiti Park Whites Line East, Waiwhetu, Lower Hutt">Te Whiti Park</option>
+      <option value="75 Woburn Rd, Lower Hutt, 5010">Vogel House</option>
+      <option value="Williams Park, Days Bay, Lower Hutt">Williams Park</option>
+    </select>
+    <br>
+        <b>End:</b>
+    <select id="end">
+            <option value="Avalon Park Taita Drive, Avalon, Lower Hutt">Avalon Park</option>
+      <option value="Belmont Regional Park, Takapu Valley, Wellington">Belmont Regional Park</option>
+      <option value="Burdan's Gate Pencarrow Coast Road, Pencarrow Head, Lower Hutt">Burdan’s Gate</option>
+      <option value="Butterfly Creek Kowhai Street, Muritai, Lower Hutt">Butterfly Creek</option>
+      <option value="art gallery near Dowse Drive, Maungaraki, Lower Hutt">Dowse Art Museum</option>
+      <option value="East Harbour Regional Park, Wainuiomata, Lower Hutt">East Harbour Regional Park</option>
+      <option value="Francis Bell Reserve, Lowry Bay, Lower Hutt">Francis Bell Reserve</option>
+      <option value="Fraser Park Squash Club Percy Cameron Street, Lower Hutt">Fraser Park</option>
+      <option value="Gibbes Watson Conservatory Myrtle Street, Lower Hutt">Gibbes Watson Conservatory</option>
+      <option value="Hayward Eastern Hills Scenic Reserve, Waiwhetu, Lower Hutt">Hayward Eastern Hill Scenic Reserve</option>
+      <option value="Hikoikoi Reserve, Petone, Lower Hutt">Hikoikoi Reserve</option>
+      <option value="Jubilee Park, Normandale, Lower Hutt">Jubilee Park</option>
+      <option value="Keith George Memorial Park, Haywards, Lower Hutt">Keith George Memorial Park</option>
+      <option value="Lake Kohangapiripiri, Pencarrow Head, Lower Hutt">Lake Kohangapiripiri</option>
+      <option value="McEwan Park, Petone, Lower Hutt">McEwan Park</option>
+      <option value="Mitchell Park, Epuni, Lower Hutt">Mitchell Park</option>
+      <option value="Mount Matthews, Rimutaka Forest Park">Mount Matthews</option>
+      <option value="Pencarrow Lighthouse Pencarrow Coast Road, Pencarrow Head, Lower Hutt">Pencarrow Head Lighthouse</option>
+      <option value="Percy Scenic Reserve Dowse Drive, Maungaraki, Lower Hutt">Percy Scenic Reserve</option>
+      <option value="Petone Foreshore Playground, Petone, Lower Hutt">Petone Foreshore Playground</option>
+      <option value="Petone Settlers Museum, Petone, Lower Hutt">Petone Settlers Museum</option>
+      <option value="Riddiford Gardens, Lower Huttn">Riddiford Gardens</option>
+      <option value="Sladden Park, Petone, Lower Hutt">Sladden Park</option>
+      <option value="Te Whiti Park Whites Line East, Waiwhetu, Lower Hutt">Te Whiti Park</option>
+      <option value="75 Woburn Rd, Lower Hutt, 5010">Vogel House</option>
+      <option value="Williams Park, Days Bay, Lower Hutt">Williams Park</option>
+    </select>
+    <br>
+      <input type="submit" id="submit">
+    </div>
+    <div id="directions-panel"></div>
+    </div>
+
+    <script type="text/javascript" src="js/lowerhutt.js"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyBMYDkR52KQXgoy8yAvvReKRFAdo5M6Jow&callback=initMap">
+    </script>
+  </body>
+</html>

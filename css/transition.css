@@ -1,0 +1,45 @@
+/* ----------  page defaults ---------- */
+
+html {
+		font-size: 100%;
+		background-color: #333;
+		}
+
+body {
+		font-size: 62.5%;
+		font-family: Arial, Verdana, Helvetica, sans-serif;
+		background: #333;
+		color: #fff;
+		}
+		
+/* ----------  primary layout ---------- */
+
+#wrapper {
+		width: 950px;
+		margin: 0 auto;
+		}
+		
+#header {
+		padding-top: 40px;
+		width: 950px;
+		}
+				
+.wellington-button{
+  background: #1d5170;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  margin-top: 20px;
+  text-decoration: none;
+
+}
+.lowerhutt-button{
+  background: #ffffff;
+  color: #1d5170;
+  font-size: 20px;
+  margin-top: 20px;
+  padding: 10px 30px 10px 30px;
+  text-decoration: none;
+
+
+}
