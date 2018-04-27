@@ -5,7 +5,6 @@
               <icon src="icons/icon-3.png" density="xhdpi" />
               <icon src="icons/icon-2.png" density="xxhdpi" />
               <icon src="icons/icon.png" density="xxxhdpi" />
+              <name short="WPOI">Wellington Point of Interest</name>
      </platform>
- <widget id="io.cordova.hellocordova" version="0.0.1" android-versionCode="13" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
- 	<name short="WPOI">Wellington Point of Interest</name>
-</widget>
+ 	
