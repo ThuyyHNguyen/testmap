@@ -8,11 +8,22 @@
     <title>Waypoints in directions</title>
   </head>
   <body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Your Profile</a>
+  <a href="place.html">Back to Place Selection</a>
+  <a href="#">History</a>
+  <a href="#">Contact</a>
+</div>
+<div id="main">
+  <span style="font-size:30px; color: white;" onclick="openNav()">☲</span>
+</div>
     <div id="map"></div>
     <div id="right-panel">
-    <div>
-    <b>Start:</b>
+    <div id="everything">
     <select id="start">
+      <option>Start</option>
       <option value="Avalon Park Taita Drive, Avalon, Lower Hutt">Avalon Park</option>
       <option value="Belmont Regional Park, Takapu Valley, Wellington">Belmont Regional Park</option>
       <option value="Burdan's Gate Pencarrow Coast Road, Pencarrow Head, Lower Hutt">Burdan’s Gate</option>
@@ -41,9 +52,9 @@
       <option value="Williams Park, Days Bay, Lower Hutt">Williams Park</option>
     </select>
     <br>
-    <b>Waypoints:</b> <br>
-    <i>Multiple selection</i> <br>
+    <br>
     <select multiple id="waypoints">
+      <option>Waypoints: You can have multiple selections</option>
       <option value="Avalon Park Taita Drive, Avalon, Lower Hutt">Avalon Park</option>
       <option value="Belmont Regional Park, Takapu Valley, Wellington">Belmont Regional Park</option>
       <option value="Burdan's Gate Pencarrow Coast Road, Pencarrow Head, Lower Hutt">Burdan’s Gate</option>
@@ -72,9 +83,10 @@
       <option value="Williams Park, Days Bay, Lower Hutt">Williams Park</option>
     </select>
     <br>
-        <b>End:</b>
+
     <select id="end">
-            <option value="Avalon Park Taita Drive, Avalon, Lower Hutt">Avalon Park</option>
+      <option>End</option>
+      <option value="Avalon Park Taita Drive, Avalon, Lower Hutt">Avalon Park</option>
       <option value="Belmont Regional Park, Takapu Valley, Wellington">Belmont Regional Park</option>
       <option value="Burdan's Gate Pencarrow Coast Road, Pencarrow Head, Lower Hutt">Burdan’s Gate</option>
       <option value="Butterfly Creek Kowhai Street, Muritai, Lower Hutt">Butterfly Creek</option>
@@ -101,10 +113,13 @@
       <option value="75 Woburn Rd, Lower Hutt, 5010">Vogel House</option>
       <option value="Williams Park, Days Bay, Lower Hutt">Williams Park</option>
     </select>
-    <br>
-      <input type="submit" id="submit">
+
+          <input type="submit" id="submit">
+
     </div>
-    <div id="directions-panel"></div>
+
+
+    <!--<div id="directions-panel"></div>-->
     </div>
 
     <script type="text/javascript" src="js/lowerhutt.js"></script>

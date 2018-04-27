@@ -5,123 +5,138 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/map.css">
-    <script src="cordova.js"></script>
     <title>Waypoints in directions</title>
   </head>
   <body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Your Profile</a>
+  <a href="place.html">Back to Place Selection</a>
+  <a href="#">History</a>
+  <a href="#">Contact</a>
+</div>
+<div id="main">
+  <span style="font-size:30px; color: white;" onclick="openNav()">☲</span>
+</div>
     <div id="map"></div>
+    <br>
     <div id="right-panel">
-    <div>
-    <b>Start:</b>
+    <div class="everything">
     <select id="start">
-      <option value="Adam Art Gallery Kelburn Parade, Kelburn, Wellington">Adam Art Gallery</option>
-      <option value="Beehive Molesworth Street, Pipitea, Wellington">Beehive</option>
-      <option value="Begonia House Glenmore Street, Kelburn, Wellington">Begonia House</option>
-      <option value="Botanic Gardens Glenmore Street, Kelburn, Wellington">Botanic Garden</option>
-      <option value="Bucket Fountain, Te Aro, Wellington">Bucket Fountain</option>
-      <option value="Cable Car Lane, Wellington">Cable Car</option>
-      <option value="Cable Car Museum, Kelburn, Wellington">Cable Car Museum</option>
-      <option value="City Gallery Wellington Wakefield Street, Wellington">City Gallery Wellington</option>
-      <option value="Civic Square, Wellington">Civic Square</option>
-      <option value="Dominion Museum Building Buckle Street, Mount Cook, Wellington">Dominion Museum</option>
-      <option value="Frank Kitts Park, Wellington">Frank Kitts Park</option>
-      <option value="Katherine Mansfield House & Garden Tinakori Road, Thorndon, Wellington">Katherine Masfield House and Garden</option>
-      <option value="Mount Victoria Lookout Lookout Road, Hataitai, Wellington">Mount Victoria</option>
-      <option value="Te Papa Tongarewa, Te Aro, Wellington">Museum of New Zealand Te Papa</option>
-      <option value="Nairn Street Cottage Nairn Street, Mount Cook, Wellington">Nairn Street Cottage</option>
-      <option value="National Tattoo Museum of New Zealand Vivian Street, Te Aro, Wellington">National Tattoo Museum of New Zealand</option>
-      <option value="National War Memorial Taranaki Street, Mount Cook, Wellington">National War Memorial</option>
-      <option value="New Zealand Cricket Museum Rugby Street, Mount Cook, Wellington">New Zealand Cricket Museum</option>
-      <option value="Ngā Taonga Sound & Vision Taranaki Street, Te Aro, Wellington">Nga Taonga Sound and Vision</option>
-      <option value="Old St Paul's Mulgrave Street, Pipitea, Wellington">Old St.Paul's</option>
-      <option value="Page Blackie Gallery Victoria Street, Wellington">Page Blackie Gallery</option>
-      <option value="Pukeahu National War Memorial Park State Highway 1, Te Aro, Wellington">Pukeahu National War Memorial</option>
-      <option value="city to sea bridge, Wellington">Sea Bridge</option>
-      <option value="Seal Coast Safari, Te Aro, Wellington">Seal Coast Safari</option>
-      <option value="Space Place Salamanca Road, Kelburn, Wellington">Space Place at Cater Obsevation</option>
-      <option value="St Mary of the Angels Boulcott Street, Wellington">St Mary of the Angels</option>
-      <option value="The Great War Exhibition, Mount Cook, Wellington">The Great War Exhibition</option>
-      <option value="The Lady Norwood Rose Garden Glenmore Street, Kelburn, Wellington">The Lady Norwood Rose Garden</option>
-      <option value="Wellington Waterfront Queens Wharf, Wellington">Waterfront</option>
-      <option value="Wellington Museum Jervois Quay, Wellington">Wellington Museum</option>
-      <option value="Wellington Zoo Daniell Street, Newtown, Wellington">Wellington Zoo</option>
+        <option >Start</option>
+        <option value="Adam Art Gallery Kelburn Parade, Kelburn, Wellington">Adam Art Gallery</option>
+        <option value="Beehive Molesworth Street, Pipitea, Wellington">Beehive</option>
+        <option value="Begonia House Glenmore Street, Kelburn, Wellington">Begonia House</option>
+        <option value="Botanic Gardens Glenmore Street, Kelburn, Wellington">Botanic Garden</option>
+        <option value="Bucket Fountain, Te Aro, Wellington">Bucket Fountain</option>
+        <option value="Cable Car Lane, Wellington">Cable Car</option>
+        <option value="Cable Car Museum, Kelburn, Wellington">Cable Car Museum</option>
+        <option value="City Gallery Wellington Wakefield Street, Wellington">City Gallery Wellington</option>
+        <option value="Civic Square, Wellington">Civic Square</option>
+        <option value="Dominion Museum Building Buckle Street, Mount Cook, Wellington">Dominion Museum</option>
+        <option value="Frank Kitts Park, Wellington">Frank Kitts Park</option>
+        <option value="Katherine Mansfield House & Garden Tinakori Road, Thorndon, Wellington">Katherine Masfield House and Garden</option>
+        <option value="Mount Victoria Lookout Lookout Road, Hataitai, Wellington">Mount Victoria</option>
+        <option value="Te Papa Tongarewa, Te Aro, Wellington">Museum of New Zealand Te Papa</option>
+        <option value="Nairn Street Cottage Nairn Street, Mount Cook, Wellington">Nairn Street Cottage</option>
+        <option value="National Tattoo Museum of New Zealand Vivian Street, Te Aro, Wellington">National Tattoo Museum of New Zealand</option>
+        <option value="National War Memorial Taranaki Street, Mount Cook, Wellington">National War Memorial</option>
+        <option value="New Zealand Cricket Museum Rugby Street, Mount Cook, Wellington">New Zealand Cricket Museum</option>
+        <option value="Ngā Taonga Sound & Vision Taranaki Street, Te Aro, Wellington">Nga Taonga Sound and Vision</option>
+        <option value="Old St Paul's Mulgrave Street, Pipitea, Wellington">Old St.Paul's</option>
+        <option value="Page Blackie Gallery Victoria Street, Wellington">Page Blackie Gallery</option>
+        <option value="Pukeahu National War Memorial Park State Highway 1, Te Aro, Wellington">Pukeahu National War Memorial</option>
+        <option value="city to sea bridge, Wellington">Sea Bridge</option>
+        <option value="Seal Coast Safari, Te Aro, Wellington">Seal Coast Safari</option>
+        <option value="Space Place Salamanca Road, Kelburn, Wellington">Space Place at Cater Obsevation</option>
+        <option value="St Mary of the Angels Boulcott Street, Wellington">St Mary of the Angels</option>
+        <option value="The Great War Exhibition, Mount Cook, Wellington">The Great War Exhibition</option>
+        <option value="The Lady Norwood Rose Garden Glenmore Street, Kelburn, Wellington">The Lady Norwood Rose Garden</option>
+        <option value="Wellington Waterfront Queens Wharf, Wellington">Waterfront</option>
+        <option value="Wellington Museum Jervois Quay, Wellington">Wellington Museum</option>
+        <option value="Wellington Zoo Daniell Street, Newtown, Wellington">Wellington Zoo</option>
 
     </select>
     <br>
-    <b>Waypoints:</b> <br>
-    <i>Multiple selection</i> <br>
+    <br>
     <select multiple id="waypoints">
-      <option value="Adam Art Gallery Kelburn Parade, Kelburn, Wellington">Adam Art Gallery</option>
-      <option value="Beehive Molesworth Street, Pipitea, Wellington">Beehive</option>
-      <option value="Begonia House Glenmore Street, Kelburn, Wellington">Begonia House</option>
-      <option value="Botanic Gardens Glenmore Street, Kelburn, Wellington">Botanic Garden</option>
-      <option value="Bucket Fountain, Te Aro, Wellington">Bucket Fountain</option>
-      <option value="Cable Car Lane, Wellington">Cable Car</option>
-      <option value="Cable Car Museum, Kelburn, Wellington">Cable Car Museum</option>
-      <option value="City Gallery Wellington Wakefield Street, Wellington">City Gallery Wellington</option>
-      <option value="Civic Square, Wellington">Civic Square</option>
-      <option value="Dominion Museum Building Buckle Street, Mount Cook, Wellington">Dominion Museum</option>
-      <option value="Frank Kitts Park, Wellington">Frank Kitts Park</option>
-      <option value="Katherine Mansfield House & Garden Tinakori Road, Thorndon, Wellington">Katherine Masfield House and Garden</option>
-      <option value="Mount Victoria Lookout Lookout Road, Hataitai, Wellington">Mount Victoria</option>
-      <option value="Te Papa Tongarewa, Te Aro, Wellington">Museum of New Zealand Te Papa</option>
-      <option value="Nairn Street Cottage Nairn Street, Mount Cook, Wellington">Nairn Street Cottage</option>
-      <option value="National Tattoo Museum of New Zealand Vivian Street, Te Aro, Wellington">National Tattoo Museum of New Zealand</option>
-      <option value="National War Memorial Taranaki Street, Mount Cook, Wellington">National War Memorial</option>
-      <option value="New Zealand Cricket Museum Rugby Street, Mount Cook, Wellington">New Zealand Cricket Museum</option>
-      <option value="Ngā Taonga Sound & Vision Taranaki Street, Te Aro, Wellington">Nga Taonga Sound and Vision</option>
-      <option value="Old St Paul's Mulgrave Street, Pipitea, Wellington">Old St.Paul's</option>
-      <option value="Page Blackie Gallery Victoria Street, Wellington">Page Blackie Gallery</option>
-      <option value="Pukeahu National War Memorial Park State Highway 1, Te Aro, Wellington">Pukeahu National War Memorial</option>
-      <option value="city to sea bridge, Wellington">Sea Bridge</option>
-      <option value="Seal Coast Safari, Te Aro, Wellington">Seal Coast Safari</option>
-      <option value="Space Place Salamanca Road, Kelburn, Wellington">Space Place at Cater Obsevation</option>
-      <option value="St Mary of the Angels Boulcott Street, Wellington">St Mary of the Angels</option>
-      <option value="The Great War Exhibition, Mount Cook, Wellington">The Great War Exhibition</option>
-      <option value="The Lady Norwood Rose Garden Glenmore Street, Kelburn, Wellington">The Lady Norwood Rose Garden</option>
-      <option value="Wellington Waterfront Queens Wharf, Wellington">Waterfront</option>
-      <option value="Wellington Museum Jervois Quay, Wellington">Wellington Museum</option>
-      <option value="Wellington Zoo Daniell Street, Newtown, Wellington">Wellington Zoo</option>
+        <option>Waypoints: You can have multiple selections</option>
+        <option value="Adam Art Gallery Kelburn Parade, Kelburn, Wellington">Adam Art Gallery</option>
+        <option value="Beehive Molesworth Street, Pipitea, Wellington">Beehive</option>
+        <option value="Begonia House Glenmore Street, Kelburn, Wellington">Begonia House</option>
+        <option value="Botanic Gardens Glenmore Street, Kelburn, Wellington">Botanic Garden</option>
+        <option value="Bucket Fountain, Te Aro, Wellington">Bucket Fountain</option>
+        <option value="Cable Car Lane, Wellington">Cable Car</option>
+        <option value="Cable Car Museum, Kelburn, Wellington">Cable Car Museum</option>
+        <option value="City Gallery Wellington Wakefield Street, Wellington">City Gallery Wellington</option>
+        <option value="Civic Square, Wellington">Civic Square</option>
+        <option value="Dominion Museum Building Buckle Street, Mount Cook, Wellington">Dominion Museum</option>
+        <option value="Frank Kitts Park, Wellington">Frank Kitts Park</option>
+        <option value="Katherine Mansfield House & Garden Tinakori Road, Thorndon, Wellington">Katherine Masfield House and Garden</option>
+        <option value="Mount Victoria Lookout Lookout Road, Hataitai, Wellington">Mount Victoria</option>
+        <option value="Te Papa Tongarewa, Te Aro, Wellington">Museum of New Zealand Te Papa</option>
+        <option value="Nairn Street Cottage Nairn Street, Mount Cook, Wellington">Nairn Street Cottage</option>
+        <option value="National Tattoo Museum of New Zealand Vivian Street, Te Aro, Wellington">National Tattoo Museum of New Zealand</option>
+        <option value="National War Memorial Taranaki Street, Mount Cook, Wellington">National War Memorial</option>
+        <option value="New Zealand Cricket Museum Rugby Street, Mount Cook, Wellington">New Zealand Cricket Museum</option>
+        <option value="Ngā Taonga Sound & Vision Taranaki Street, Te Aro, Wellington">Nga Taonga Sound and Vision</option>
+        <option value="Old St Paul's Mulgrave Street, Pipitea, Wellington">Old St.Paul's</option>
+        <option value="Page Blackie Gallery Victoria Street, Wellington">Page Blackie Gallery</option>
+        <option value="Pukeahu National War Memorial Park State Highway 1, Te Aro, Wellington">Pukeahu National War Memorial</option>
+        <option value="city to sea bridge, Wellington">Sea Bridge</option>
+        <option value="Seal Coast Safari, Te Aro, Wellington">Seal Coast Safari</option>
+        <option value="Space Place Salamanca Road, Kelburn, Wellington">Space Place at Cater Obsevation</option>
+        <option value="St Mary of the Angels Boulcott Street, Wellington">St Mary of the Angels</option>
+        <option value="The Great War Exhibition, Mount Cook, Wellington">The Great War Exhibition</option>
+        <option value="The Lady Norwood Rose Garden Glenmore Street, Kelburn, Wellington">The Lady Norwood Rose Garden</option>
+        <option value="Wellington Waterfront Queens Wharf, Wellington">Waterfront</option>
+        <option value="Wellington Museum Jervois Quay, Wellington">Wellington Museum</option>
+        <option value="Wellington Zoo Daniell Street, Newtown, Wellington">Wellington Zoo</option>
+
     </select>
     <br>
-    <b>End:</b>
+
     <select id="end">
-      <option value="Adam Art Gallery Kelburn Parade, Kelburn, Wellington">Adam Art Gallery</option>
-      <option value="Beehive Molesworth Street, Pipitea, Wellington">Beehive</option>
-      <option value="Begonia House Glenmore Street, Kelburn, Wellington">Begonia House</option>
-      <option value="Botanic Gardens Glenmore Street, Kelburn, Wellington">Botanic Garden</option>
-      <option value="Bucket Fountain, Te Aro, Wellington">Bucket Fountain</option>
-      <option value="Cable Car Lane, Wellington">Cable Car</option>
-      <option value="Cable Car Museum, Kelburn, Wellington">Cable Car Museum</option>
-      <option value="City Gallery Wellington Wakefield Street, Wellington">City Gallery Wellington</option>
-      <option value="Civic Square, Wellington">Civic Square</option>
-      <option value="Dominion Museum Building Buckle Street, Mount Cook, Wellington">Dominion Museum</option>
-      <option value="Frank Kitts Park, Wellington">Frank Kitts Park</option>
-      <option value="Katherine Mansfield House & Garden Tinakori Road, Thorndon, Wellington">Katherine Masfield House and Garden</option>
-      <option value="Mount Victoria Lookout Lookout Road, Hataitai, Wellington">Mount Victoria</option>
-      <option value="Te Papa Tongarewa, Te Aro, Wellington">Museum of New Zealand Te Papa</option>
-      <option value="Nairn Street Cottage Nairn Street, Mount Cook, Wellington">Nairn Street Cottage</option>
-      <option value="National Tattoo Museum of New Zealand Vivian Street, Te Aro, Wellington">National Tattoo Museum of New Zealand</option>
-      <option value="National War Memorial Taranaki Street, Mount Cook, Wellington">National War Memorial</option>
-      <option value="New Zealand Cricket Museum Rugby Street, Mount Cook, Wellington">New Zealand Cricket Museum</option>
-      <option value="Ngā Taonga Sound & Vision Taranaki Street, Te Aro, Wellington">Nga Taonga Sound and Vision</option>
-      <option value="Old St Paul's Mulgrave Street, Pipitea, Wellington">Old St.Paul's</option>
-      <option value="Page Blackie Gallery Victoria Street, Wellington">Page Blackie Gallery</option>
-      <option value="Pukeahu National War Memorial Park State Highway 1, Te Aro, Wellington">Pukeahu National War Memorial</option>
-      <option value="city to sea bridge, Wellington">Sea Bridge</option>
-      <option value="Seal Coast Safari, Te Aro, Wellington">Seal Coast Safari</option>
-      <option value="Space Place Salamanca Road, Kelburn, Wellington">Space Place at Cater Obsevation</option>
-      <option value="St Mary of the Angels Boulcott Street, Wellington">St Mary of the Angels</option>
-      <option value="The Great War Exhibition, Mount Cook, Wellington">The Great War Exhibition</option>
-      <option value="The Lady Norwood Rose Garden Glenmore Street, Kelburn, Wellington">The Lady Norwood Rose Garden</option>
-      <option value="Wellington Waterfront Queens Wharf, Wellington">Waterfront</option>
-      <option value="Wellington Museum Jervois Quay, Wellington">Wellington Museum</option>
-      <option value="Wellington Zoo Daniell Street, Newtown, Wellington">Wellington Zoo</option>
+        <option>End</option>
+        <option value="Adam Art Gallery Kelburn Parade, Kelburn, Wellington">Adam Art Gallery</option>
+        <option value="Beehive Molesworth Street, Pipitea, Wellington">Beehive</option>
+        <option value="Begonia House Glenmore Street, Kelburn, Wellington">Begonia House</option>
+        <option value="Botanic Gardens Glenmore Street, Kelburn, Wellington">Botanic Garden</option>
+        <option value="Bucket Fountain, Te Aro, Wellington">Bucket Fountain</option>
+        <option value="Cable Car Lane, Wellington">Cable Car</option>
+        <option value="Cable Car Museum, Kelburn, Wellington">Cable Car Museum</option>
+        <option value="City Gallery Wellington Wakefield Street, Wellington">City Gallery Wellington</option>
+        <option value="Civic Square, Wellington">Civic Square</option>
+        <option value="Dominion Museum Building Buckle Street, Mount Cook, Wellington">Dominion Museum</option>
+        <option value="Frank Kitts Park, Wellington">Frank Kitts Park</option>
+        <option value="Katherine Mansfield House & Garden Tinakori Road, Thorndon, Wellington">Katherine Masfield House and Garden</option>
+        <option value="Mount Victoria Lookout Lookout Road, Hataitai, Wellington">Mount Victoria</option>
+        <option value="Te Papa Tongarewa, Te Aro, Wellington">Museum of New Zealand Te Papa</option>
+        <option value="Nairn Street Cottage Nairn Street, Mount Cook, Wellington">Nairn Street Cottage</option>
+        <option value="National Tattoo Museum of New Zealand Vivian Street, Te Aro, Wellington">National Tattoo Museum of New Zealand</option>
+        <option value="National War Memorial Taranaki Street, Mount Cook, Wellington">National War Memorial</option>
+        <option value="New Zealand Cricket Museum Rugby Street, Mount Cook, Wellington">New Zealand Cricket Museum</option>
+        <option value="Ngā Taonga Sound & Vision Taranaki Street, Te Aro, Wellington">Nga Taonga Sound and Vision</option>
+        <option value="Old St Paul's Mulgrave Street, Pipitea, Wellington">Old St.Paul's</option>
+        <option value="Page Blackie Gallery Victoria Street, Wellington">Page Blackie Gallery</option>
+        <option value="Pukeahu National War Memorial Park State Highway 1, Te Aro, Wellington">Pukeahu National War Memorial</option>
+        <option value="city to sea bridge, Wellington">Sea Bridge</option>
+        <option value="Seal Coast Safari, Te Aro, Wellington">Seal Coast Safari</option>
+        <option value="Space Place Salamanca Road, Kelburn, Wellington">Space Place at Cater Obsevation</option>
+        <option value="St Mary of the Angels Boulcott Street, Wellington">St Mary of the Angels</option>
+        <option value="The Great War Exhibition, Mount Cook, Wellington">The Great War Exhibition</option>
+        <option value="The Lady Norwood Rose Garden Glenmore Street, Kelburn, Wellington">The Lady Norwood Rose Garden</option>
+        <option value="Wellington Waterfront Queens Wharf, Wellington">Waterfront</option>
+        <option value="Wellington Museum Jervois Quay, Wellington">Wellington Museum</option>
+        <option value="Wellington Zoo Daniell Street, Newtown, Wellington">Wellington Zoo</option>
+
     </select>
+    <br>
     <br>
       <input type="submit" id="submit">
     </div>
-    <div id="directions-panel"></div>
+    <!--<div id="directions-panel"></div>-->
     </div>
 
     <script type="text/javascript" src="js/map.js"></script>
